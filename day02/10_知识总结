@@ -1,0 +1,72 @@
+# -*- coding: utf-8 -*-
+#   File Name：     10_知识总结
+#   Description :
+#   Author :       zongyanzhang
+#   date：          2018/8/19
+
+知识回顾：
+    1.装饰器
+        在不改变原函数的基础上，为函数增加功能（日志）
+        # 定义装饰器
+        def derator(f): # f就是所装饰的原函数
+               @functools.wraps(f)
+               def wrapper(*args, **kwargs): # args,kwargs接受原函数的任意类型的参数
+                装饰代码
+                return f(*args, **kwargs)
+            return wrapper
+
+        @derator
+        def fun():
+            pass
+
+        带参数的装饰器
+        def log(text): # text就是装饰器的参数
+            def derator(f): # f就是所装饰的原函数
+                @functools.wraps(f)
+                def wrapper(*args, **kwargs): # args,kwargs接受原函数的任意类型的参数
+                    装饰代码
+                    return f(*args, **kwargs)
+                return wrapper
+            return derator
+
+        @derator("参数")
+        def fun():
+            pass
+
+        fun() ---->fun = log(参数)(fun) ---->fun就是wrapper
+
+    2.面向对象
+        三大特征：封装，继承，多态
+
+        class 类名:
+            属性:
+                类属性
+                    类名.属性名  / 对象名.属性名
+                实例属性
+                    对象名.属性名
+            方法:
+                __xxx__魔法方法(自动调用)
+                    __init__()
+                    __del__()
+                    __len__()
+                    __str__()
+                    __iter__()
+                    __next__()
+                设置器、访问器
+                    设置器不单独存在
+                @property
+                def name(self):
+                    return self.__name
+                @name.setter
+                def name(self, nm):
+                    self.__name = nm
+                obj.name = xxx ===> obj.name(xxx)
+
+        继承
+            classs Subclass(Parentclass):
+                pass
+
+        枚举类:
+            @enum.unique
+            class Myenum(enum.Enum):
+                pass

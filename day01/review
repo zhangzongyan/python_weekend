@@ -1,0 +1,69 @@
+
+知识总结:
+    python基本数据类型
+        数字类型：整型 浮点 复数
+        组合类型：
+            有序：
+                可变：列表
+                不可变：字符串 元祖
+            无序：
+                集合
+                字典
+        有序类型：
+            in
+            not in
+            +
+            * 整型
+            []
+            [start:end:step]
+                i = start
+                while i < end:
+                    l[i]
+                    i += step
+            len()
+            max()
+            min()
+            .count()
+            .index()
+
+        列表:
+            l = list()
+            l.append() 追加
+            l.insert(index, elm)
+            l.pop(index=-1)
+            l.remove(elm)
+            l.clear()   (del l[:])
+            l.copy()  (newl = l[:])
+        字符串:
+            "".join(itereble)
+            .split(sep=" ")
+            .upper()
+            .lower()
+            .center()
+            .format()
+        字典:
+            .keys()
+            .values()
+            .items()
+            .update(key=value)
+            .pop()
+            k[key] = newvalue
+
+
+    函数：
+        定义
+        调用
+        变量的作用域、生存周期
+
+        高级属性：
+           列表生成式
+                []
+           生成器
+                ()
+                yield
+           迭代器（Iterator）、可迭代(Iterable)
+
+           高阶函数：函数做参数
+                map()
+                functiontools.reduce()
+                sorted()

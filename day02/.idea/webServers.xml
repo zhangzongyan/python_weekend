@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bb6dc2b5-635b-43b2-b0cb-7b7751446e87" name="weekend" url="http://192.168.91.132">
+        <fileTransfer host="192.168.91.132" port="22" rootFolder="/home/reala_zhang" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
