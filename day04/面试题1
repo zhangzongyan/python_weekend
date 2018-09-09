@@ -1,0 +1,73 @@
+
+1.python面向对象有什么特点？
+
+2.在定制自己的类的时候，有哪些魔法方法可以使用?
+
+3.实例方法，类方法，静态方法在定义的时候有什么区别?
+
+4.__new__和__init__有什么区别
+
+5.super()的作用是什么？有什么优势
+
+6.python 中is 和 == 一样吗？
+
+7.以下代码输出的结果是？
+class A(object):
+    def go(self):
+        print("go A")
+    def stop(self):
+        print("stop A")
+    def pause(self):
+        raise Exception("Not Implemented")
+
+class B(A):
+    def go(self):
+        super().go()
+        print("go B")
+class C(A):
+    def go(self):
+        super().go()
+        print("go C")
+    def stop(self):
+        super(C, self).stop()
+        print("stop C")
+class D(B, C):
+    def go(self):
+        super().go()
+        print("go D")
+    def pause(self):
+        print("wait .... wait")
+
+class E(B, C):
+    pass
+a = A()
+b = B()
+c = C()
+d = D()
+e = E()
+
+a.go()
+b.stop()
+c.go()
+d.go()
+d.pause()
+e.go()
+
+8.如何判断是函数还是方法?
+
+9. 1,2,3,4,5能组成多少个互不相同且不重复的三位数？使用代码说明
+
+10.metaclass的作用，列举你了解的其应用场景
+
+11.type()和isinstance() 有区别吗？你更倾向于使用哪一个
+
+12.python是如何进行异常处理的
+
+13.试用一段代码产生一个列表[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+14.你了解的数据结构有哪些
+
+
+
+
+

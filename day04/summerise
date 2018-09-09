@@ -1,0 +1,40 @@
+
+并发:
+    多进程:
+        multiprocess--->面向对象
+        创建---->实例化进程对象(Process(target=fun, args=(tuple)))
+        特点:
+            进程环境独立(全局空间独立的)
+        IPC:
+            share memery ----->Value(type, value) / Array(type, iterable)
+            queue ----->Queue(size)--->put() / get()
+                  ----->进程池---->Manager().Queue()
+            pipe ---->Pipe(bool)---->(conn1, conn2)--->recv() / send()
+        进程数目多--->池(Pool(number))
+            apply_async()异步添加
+            apply()同步添加
+            map()
+            close() #关闭池
+            terminate() #终止所有池中进程
+            join()
+
+    多线程:
+        threading---->面向对象
+        实例化对象---->Thread(target=, args=())
+            start()
+            join()
+        特点:
+            GIL全局锁---》不并行
+            共享全局空间
+                优势数据交换方便
+                发生竞争
+                    解决竞争(Lock) acquire() / release()
+
+
+    内存管理
+
+下周内容:
+    网络编程(socket)
+    邮件
+    数据库
+        sqlite / mysql
