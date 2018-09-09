@@ -12,6 +12,7 @@ import time
 def fun(s):
     print("hello", s)
     time.sleep(1)
+    raise IndexError
 
 if __name__ == '__main__':
     # 实例化进程对象
@@ -22,6 +23,8 @@ if __name__ == '__main__':
 
     # 收尸, 等待进程对象pro_obj终止
     pro_obj.join()
+
+    print(pro_obj.exitcode)
 
     print("bye-bye")
 
